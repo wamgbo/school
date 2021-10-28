@@ -1,4 +1,3 @@
-
 #define dr digitalRead 
 #define dw digitalWrite 
 #define led1 38
@@ -37,5 +36,8 @@ void loop() {
     a+=1;
   }
   a+=37;
-  dw(a,1);
+  for(i=led1;i<=a;i++){
+  dw(i,1);  
+  }
+  
 }
