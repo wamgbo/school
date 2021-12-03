@@ -20,19 +20,27 @@ void setup() {
 }
 
 void loop() {
-  dw(led1,dr(d1)==0);
-  for(i=0;i<=3;i++);{
-    if((dr(d1+i)==0)!=(dr(d1+i+1)==0)){
-      dw(led1+i+1,1);
-    }
-  }
+  dw(led1,!dr(d1));
   
-  for(i=led1;i<=led16;i++){
-    dw(i,0);
+ for(i=22;i<29;i++){
+  if(i==25){
+    if(!dr(i)==dr(i+1))
+      dw(i+17,0);   
+    else
+      dw(i+17,1);
+  }
+  else{
+    if(dr(i)==dr(i+1))
+      dw(i+17,0);   
+    else
+      dw(i+17,1);
+  }
+  }
   }
  
+  
+  
 
 
 
   
-}
