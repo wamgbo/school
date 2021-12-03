@@ -6,13 +6,13 @@ int main(int argc, char** argv) {
 	int c,i;
 	cin>>a>>b;
 	c=a.size()+b.size();
-		
-		for(i=0;i<=c;i++){
-			if(i<a.size())
+
+	for(i=0; i<=c; i++) {
+		if(i<a.size())
 			cout<<a[i];
-			
-			if(i<b.size())
+
+		if(i<b.size())
 			cout<<b[i];
-		}
+	}
 	return 0;
 }
