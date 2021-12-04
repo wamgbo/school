@@ -8,12 +8,16 @@ int main(int argc, char** argv) {
 	string a;
 	cin>>a;
 	for(i=0;i<=a.size()-1;i++){
-		if(a[i]=="."){
-			point 
+		if(a[i]='.'){
+			point = i;
 		}
-	
+	for(i=0;i<=a.size()/2;i++){
+		if(a[i]>a[point]){
+			
+		} 
+	}
 	
 	} 
-	
+	cout<<point;
 	return 0;
 }
