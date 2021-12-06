@@ -31,7 +31,7 @@ int main(int argc, char** argv) {
 		if((int)a[i]>='0' and (int)a[i]<='9')
 			c+=((int)a[i]-48)*pow(16,point-i-1);
 	}	
-		for(i=point+1;a.size()-1;i++){
+		for(i=point+1;i<=a.size()-1;i++){
 			if((int)a[i]>='A' and (int)a[i]<='Z'){
 				c+=((int)a[i]-55)*pow(16,point-i); 
 			} 
