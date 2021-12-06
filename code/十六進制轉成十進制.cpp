@@ -11,7 +11,7 @@
 //輸入：100.56
 //輸出：256.3359375
 #include <iostream>
-#include <string.h>
+#include <iomanip>
 #include <math.h>
 using namespace std;
 int main(int argc, char** argv) {
@@ -38,6 +38,6 @@ int main(int argc, char** argv) {
 			if((int)a[i]>='0' and (int)a[i]<='9')
 				c+=((int)a[i]-48)*pow(16,point-i);
 		}	
-	cout<<c;
+	cout<<c; 
 	return 0;
 }
