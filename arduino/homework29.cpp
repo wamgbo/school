@@ -28,7 +28,7 @@ void setup() {
 void loop() {
   byte i;
   digitalWrite(keyC1,0);digitalWrite(keyC2,1);digitalWrite(keyC3,1);digitalWrite(keyC4,1);
-  for( i=0; i<=3; i++ )             // 掃描０、４、８、Ｃ這一排
+  for( i=0; i<=3; i++ )             
   {
     if( digitalRead(keyR1+i)==0 )
     {
@@ -38,7 +38,7 @@ void loop() {
     }
   }
   digitalWrite(keyC1,1);digitalWrite(keyC2,0);digitalWrite(keyC3,1);digitalWrite(keyC4,1);
-  for( i=0; i<=3; i++ )             // 掃描１、５、９、Ｄ這一排
+  for( i=0; i<=3; i++ )             
   {
     if( digitalRead(keyR1+i)==0 )
     {
