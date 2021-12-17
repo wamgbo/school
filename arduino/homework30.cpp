@@ -33,23 +33,27 @@ void loop() {
   byte i;
   digitalWrite(keyC1,0);digitalWrite(keyC2,1);digitalWrite(keyC3,1);digitalWrite(keyC4,1);
     if( digitalRead(keyR1)==0 )
-    {
+    { 
       LCD.print(0);
+      delay(100);
     }
   digitalWrite(keyC1,0);digitalWrite(keyC2,1);digitalWrite(keyC3,1);digitalWrite(keyC4,1);
     if( digitalRead(keyR1+1)==0 )
     {
       LCD.print(4);
+      delay(100);
     }
   digitalWrite(keyC1,0);digitalWrite(keyC2,1);digitalWrite(keyC3,1);digitalWrite(keyC4,1);
     if( digitalRead(keyR1+2)==0 )
     {
       LCD.print(8);
+      delay(100);
     }
    digitalWrite(keyC1,0);digitalWrite(keyC2,1);digitalWrite(keyC3,1);digitalWrite(keyC4,1);
     if( digitalRead(keyR1+3)==0 )
     {
       LCD.print ('C');
+      delay(100);
     }
     //_____________________________________________________________________________________________
 
@@ -58,21 +62,25 @@ void loop() {
     if( digitalRead(keyR1)==0 )
     {
       LCD.print(1);
+      delay(100);
     }
   digitalWrite(keyC1,1);digitalWrite(keyC2,0);digitalWrite(keyC3,1);digitalWrite(keyC4,1);
     if( digitalRead(keyR1+1)==0 )
     {
       LCD.print(5);
+      delay(100);
     }
   digitalWrite(keyC1,1);digitalWrite(keyC2,0);digitalWrite(keyC3,1);digitalWrite(keyC4,1);
     if( digitalRead(keyR1+2)==0 )
     {
       LCD.print(9);
+      delay(100);
     }
    digitalWrite(keyC1,1);digitalWrite(keyC2,0);digitalWrite(keyC3,1);digitalWrite(keyC4,1);
     if( digitalRead(keyR1+3)==0 )
     {
       LCD.print ('D');
+      delay(100);
     }
    //_____________________________________________________________________________________________
 
@@ -80,21 +88,25 @@ void loop() {
     if( digitalRead(keyR1)==0 )
     {
       LCD.print(2);
+      delay(100);
     }
   digitalWrite(keyC1,1);digitalWrite(keyC2,1);digitalWrite(keyC3,0);digitalWrite(keyC4,1);
     if( digitalRead(keyR1+1)==0 )
     {
       LCD.print(6);
+      delay(100);
     }
   digitalWrite(keyC1,1);digitalWrite(keyC2,1);digitalWrite(keyC3,0);digitalWrite(keyC4,1);
     if( digitalRead(keyR1+2)==0 )
     {
       LCD.print('A');
+      delay(100);
     }
    digitalWrite(keyC1,1);digitalWrite(keyC2,1);digitalWrite(keyC3,0);digitalWrite(keyC4,1);
     if( digitalRead(keyR1+3)==0 )
     {
       LCD.print ('E');
+      delay(100);
     }
     //_______________________________________________________________________________________________
 
@@ -102,23 +114,27 @@ void loop() {
     if( digitalRead(keyR1)==0 )
     {
       LCD.print(3);
+      delay(100);
     }
   digitalWrite(keyC1,1);digitalWrite(keyC2,1);digitalWrite(keyC3,1);digitalWrite(keyC4,0);
     if( digitalRead(keyR1+1)==0 )
     {
       LCD.print(7);
+      delay(100);
     }
   digitalWrite(keyC1,1);digitalWrite(keyC2,1);digitalWrite(keyC3,1);digitalWrite(keyC4,0);
     if( digitalRead(keyR1+2)==0 )
     {
-      LCD.print('B');
+     LCD.print('B');
+     delay(100);
     }
    digitalWrite(keyC1,1);digitalWrite(keyC2,1);digitalWrite(keyC3,1);digitalWrite(keyC4,0);
     if( digitalRead(keyR1+3)==0 )
     {
       LCD.print ('F');
+      delay(100);
     }
-  
+
   LCD.clear();
 
 
