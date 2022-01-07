@@ -14,5 +14,5 @@ int main(){
 			break;
 		}
 	}
-	cout<<day;
+	cout<<day<<"天";
 }
