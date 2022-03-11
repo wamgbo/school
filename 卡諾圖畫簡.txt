@@ -1,0 +1,8 @@
+JD=C'
+KD=1
+JC=DA
+KC=1
+JB=C
+KB=1
+JA=A'
+KA=B
