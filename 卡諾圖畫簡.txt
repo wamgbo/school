@@ -4,5 +4,5 @@ JC=DA
 KC=1
 JB=C
 KB=1
-JA=A'
+JA=1
 KA=B
