@@ -1,6 +1,18 @@
-.y{
+.bl{
     color: blue;
 }
-.x{
-    color: palevioletred;
+.g{
+    color:green;
+}
+.y{
+    
+    color:gold;
+    font-size:50px;
+    font-family:fantasy, Helvetica, sans-serif;
+}
+.w{
+    
+    color:orangered;
+    font-size:40px;
+    font-family:fantasy, Helvetica, sans-serif;
 }
