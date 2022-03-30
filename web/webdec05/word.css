@@ -16,9 +16,17 @@
     font-size:50px;
     font-family:fantasy, Helvetica, sans-serif;
 }
-.word{
+.table{
     
-    color:orangered;
+    color:gold;
+    font-size:30px;
+    font-family:fantasy, Helvetica, sans-serif;
+}
+.word{
+    text-align:center;
+    -webkit-text-stroke: 1px black;
+    font-weight: 1000;
+    color:orange;
     font-size:40px;
     font-family:fantasy, Helvetica, sans-serif;
 }
@@ -30,17 +38,25 @@
 }
 #p1{
     position:absolute;
-    top: 780px;
-    right: 25px;
-    
-
+    top: 799px;
+    right: 50.5px;
 }
+
 #p2{
     position:absolute;
     top: 800px;
     right: 150px;
-    
+}
 
+#p3{
+    position:absolute;
+    top: 720px;
+    right: 140px;
+}
+#p4{
+    position:absolute;
+    top: 720px;
+    right: 50px;
 }
 
 .de{
@@ -48,4 +64,20 @@
     color:red;
     font-size:50px;
     font-family:fantasy, Helvetica, sans-serif;
+}
+.shape-ex1{
+    width: 150px;
+    height: 40px;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    line-height: 40px;
+    color:black;
+    background-color: transparent;
+    border: 1px solid #000;
+    transition: all .3s linear;
+}
+.shape-ex1:hover{
+    background-color: #000;
+    color: yellow;
 }
