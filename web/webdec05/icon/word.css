@@ -1,0 +1,59 @@
+.bl{
+    color: blue;
+}
+.g{
+    color:green;
+}
+.title{
+    
+    color:gold;
+    font-size:50px;
+    font-family:fantasy, Helvetica, sans-serif;
+}
+.title2{
+    
+    color:blueviolet;
+    font-size:50px;
+    font-family:fantasy, Helvetica, sans-serif;
+}
+.word{
+    
+    color: darkorange;
+    font-size:40px;
+    font-family:fantasy, Helvetica, sans-serif;
+}
+#p{
+    position:absolute;
+    top: 800px;
+    
+
+}
+#p1{
+    position:absolute;
+    top: 799px;
+    right: 50.5px;
+}
+
+#p2{
+    position:absolute;
+    top: 800px;
+    right: 150px;
+}
+
+#p3{
+    position:absolute;
+    top: 720px;
+    right: 140px;
+}
+#p4{
+    position:absolute;
+    top: 720px;
+    right: 50px;
+}
+
+.de{
+    
+    color:red;
+    font-size:50px;
+    font-family:fantasy, Helvetica, sans-serif;
+}
