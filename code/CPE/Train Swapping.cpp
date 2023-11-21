@@ -8,7 +8,7 @@ int bubbleSort(int array[], int n)
     while (swapped)
     {
         swapped = false;
-        j++;
+        j++;//當j加到等於n時，不會執行for也不會執行swapped = true;
         for (int i = 0; i < n - j; ++i)
         {
             if (array[i] > array[i + 1])
