@@ -1,4 +1,5 @@
 #include<stdio.h>
+int count=0;
 void sort(int words[], int time) {//排序陣列
 	int temp;
 	for (int i = 0; i < time; i++) {
@@ -12,14 +13,16 @@ void sort(int words[], int time) {//排序陣列
 		}
 	}
 }
-int binary_search(int num[],int left ,int right,int key) {
+void binary_search(int num[],int left ,int right,int key) {
 	int mid = (left + right) / 2;//尋找中間值
-	if (left> right) {//當left>right已經不合理了設置回傳-1
-		return -1;
+	count++;
+	if (left> right) {//當left>right已經不合理了
+		printf("查無此數字");
 	}
 	else if(num[mid]==key)//
 	{
-		return num[mid];
+		printf("搜尋次數%d\n",count);
+		printf ("%d",num[mid]);
 	}
 
 	if (key > num[mid]) {//當目標大於中間值搜尋mid+1到right的範圍
@@ -49,13 +52,7 @@ int main() {
 		printf("%d ", num[i]);
 	}
 	printf("\n");
-	if (binary_search(num, 0, 15, key) == -1) {//如果回傳-1就輸出無結果
-		printf("查無此數字");
-	}
-	else
-	{
-		printf("欲搜尋的數字:%d", binary_search(num, 0, 15, key));//輸出binary_search函示的mid
-	}
+	binary_search(num,0,15,key);
 	
 
 }
