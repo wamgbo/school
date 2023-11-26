@@ -21,8 +21,8 @@ int recursive_combinatorial_number(int num1, int num2) {
 		return 1;
 	}
 	else
-	{
-		return recursive_combinatorial_number(num1 - 1, num2) + recursive_combinatorial_number(num1 - 1, num2 - 1);//巴斯卡定理C (n-1)取(m-1) + C (n-1)取m = C n取m
+	{//巴斯卡定理C (n-1)取(m-1) + C (n-1)取m = C n取m
+		return recursive_combinatorial_number(num1 - 1, num2) + recursive_combinatorial_number(num1 - 1, num2 - 1);
 	}
 }
 int main() {
