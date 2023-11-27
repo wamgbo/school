@@ -72,6 +72,7 @@ void concatenate(char a[],char b[]) //字元陣列b串接到字元陣列a之後
 		i++;
 		j++;
 	}
+	a[i]=b[j];
 
 }
 void reverse(char a[])//字串反轉 
@@ -84,4 +85,5 @@ void reverse(char a[])//字串反轉
 		a[i] = a[len - i];
 		i++;
 	}
+	a[i]=a[len-i];
 }
