@@ -28,7 +28,7 @@ void binary_search(int num[],int left ,int right,int key) {
 	if (key > num[mid]) {//當目標大於中間值搜尋mid+1到right的範圍
 		binary_search(num, mid + 1, right, key);
 	}
-	else if (key<num[mid])//當目標小於中間值搜尋mid+1到left的範圍
+	else if (key<num[mid])//當目標小於中間值搜尋mid-1到left的範圍
 	{
 		binary_search(num, left, mid-1, key);
 	}
