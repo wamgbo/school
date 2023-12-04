@@ -1,18 +1,6 @@
 #include<stdio.h>
 #include<string.h>
-void sort(int words[], int time) {//排序陣列
-	int temp;
-	for (int i = 0; i < time; i++) {
-		for (int j = 0; j < time - i - 1; j++)
-		{
-			if (words[j] > words[j + 1]) {
-				temp = words[j + 1];
-				words[j + 1] = words[j];
-				words[j] = temp;
-			}
-		}
-	}
-}
+
 void Reveres_array(const int intput_words[], int time) {
 	int i = time - 1;
 	int j = 0;
@@ -55,7 +43,7 @@ int main() {
 			
 		}
 
-		sort(input_words, time);//排序陣列
+		
 		Reveres_array(input_words, time);//非遞迴倒轉
 		printf("以遞迴函式處理：");
 		Recursive_reveres_array(input_words, time);//遞迴倒轉
