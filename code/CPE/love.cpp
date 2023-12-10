@@ -1,39 +1,52 @@
 #include<stdio.h>
-#include<math.h>
-long GCD(int num ,int num2) {
-	int temp=0;
-	while (num2!=0)
-	{
-		temp = num % num2;
-		num = num2;
-		num2 = temp;
-	}
-	return num;
-}
-long long fun(int num) {
-	int sum = 0, i = 0;
-	while (num != 0)
-	{
-		sum += num % 10 * pow(2, i);
-		num /= 10;
-		i += 1;
-	}
-	return sum;
-}
+#include<string.h>
+//用字串來做儲存比較不會有誤差值
+void abc(char num[], int casetime);
+int gcd(int num, int num1);
+int binary(char str[]);
+
 int main() {
-	long long num = 0,sum,sum2;
-	scanf("%d", &num);
-	for (int i = 1; i <=num; i++) {
-		scanf("%d%d", &sum,&sum2);
-		sum = fun(sum);
-		sum2 = fun(sum2);
-		if (GCD(sum, sum2)==1) {
-			printf("Pair #%d: Love is not all you need!\n",i);
+	int casetime;
+	char str[31], str1[31], result[31] = {0};		//result陣列來存取狀態
+	scanf("%d", &casetime);							//輸入次數
+	for (int i = 0; i < casetime; i++) {
+		scanf("%s", str);							//一組輸入
+		scanf("%s", str1);
+		if (gcd(binary(str), binary(str1)) != 1) {	
+			result[i] = '1';						//符合條件就是1
 		}
 		else
 		{
-			printf("﻿﻿Pair #%d: All you need is love!\n", i);
+			result[i] = '0';
 		}
 	}
+	abc(result, casetime);
 	
+}
+int gcd(int num, int num1) {
+	return num1 == 0 ? num : gcd(num1, num % num1);		//gcd 輾轉 b a b ab口絕
+}
+int binary(char str[]) {								//轉換
+	int w=1,num=0;
+	for (int i = strlen(str) - 1; i >= 0; i--) {		//從最後一位開始計算
+		if (str[i] == '1') {
+			num += (str[i]-'0') * w;					//num等於轉換後的數字
+		}												//將char中轉乘int 等於1 do 
+		w *= 2;											//binary權數
+	}
+	return num;
+}
+void abc(char num[], int casetime) {					//將狀態輸出的狀態存到陣列
+	int i = 0;											
+	while (num[i]!='\0')
+	{
+		if (num[i] == '1') {
+			printf("Pair #%d: All you need is love!\n", i + 1);
+		}
+		else
+		{
+			printf("Pair #%d: Love is not all you need!\n", i + 1);
+		}
+		i++;
+	}
 }
