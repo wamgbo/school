@@ -8,7 +8,6 @@ int main() {
 	while (strcmp(gets(num),"0") != 0) {//當輸入等於0就stop,gets(num)輸入字串,strcmp比較 ture就回傳1 flase回傳0
 		while (num[i]!='\0')//執行到'\0'之前
 		{
-			
 			value = num[i] - '0';//字元轉數字
 			if (i % 2 == 0) {//取基數位
 				sum0 += value;
