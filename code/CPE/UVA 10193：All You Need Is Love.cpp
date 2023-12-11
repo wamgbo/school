@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<string.h>
+//如果兩num有公因數就輸出All you need is love!
 //用字串來做儲存比較不會有誤差值
 void abc(char num[], int casetime);
 int gcd(int num, int num1);
