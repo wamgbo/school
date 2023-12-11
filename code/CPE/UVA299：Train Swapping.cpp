@@ -1,4 +1,5 @@
 #include<stdio.h>
+//計算換位的次數
 void bouble_sort(int num[], int num_size) {
 	int temp = 0, count = 0;
 	for (int i = 0; i < num_size; i++) {			//氣泡排序法
