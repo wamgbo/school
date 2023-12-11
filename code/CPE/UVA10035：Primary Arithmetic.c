@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<string.h>
-
+//二進位求進為幾次
 int carry_count(char str1[], char str2[]);
 
 int main() {
