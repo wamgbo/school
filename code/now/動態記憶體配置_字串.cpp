@@ -3,18 +3,19 @@
 #include<string.h>
 
 int main() {
-	int word_size = 0, i = 0, sum = 0;;
-	scanf("%d", &word_size);
-	char *word =(char*) malloc((word_size +1)* sizeof(char));
-	getchar();
-	fgets(word, (word_size + 1), stdin);
-	while (word[i]!='\0')
+	int case_time,len,sum=0;
+	char* wptr;
+	scanf("%d", &case_time);
+	getchar();//需要擷取\n;
+	wptr = (char*)malloc(case_time * sizeof(char));
+	fgets(wptr, strlen(wptr) - 1, stdin);
+	len = strlen(wptr) - 1;
+	while (len--)
 	{
-		if (word[i] >= '0' && word[i] <= '9')
+		if (*(wptr + len) >= '0' && *(wptr + len) <= '9') 
 		{
-			sum += (word[i] - '0');
+			sum += *(wptr + len) - '0';
 		}
-		i++;
 	}
 	printf("%d", sum);
 }
