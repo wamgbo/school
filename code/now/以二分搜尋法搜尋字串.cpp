@@ -42,6 +42,13 @@ void sort(char zodiac[][40])
 				strcpy(zodiac[j], zodiac[j + 1]);
 				strcpy(zodiac[j + 1], temp);
 			}
+			else if (strlen(zodiac[j]) == strlen(zodiac[j + 1])) {
+			    if(strcmp(zodiac[j],zodiac[j+1])>0){
+			        strcpy(temp, zodiac[j]);
+				    strcpy(zodiac[j], zodiac[j + 1]);
+				    strcpy(zodiac[j + 1], temp);
+			    }
+			}
 		}
 	}
 	for (int i = 0; i < 12; i++)
