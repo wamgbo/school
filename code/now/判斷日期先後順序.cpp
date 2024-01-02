@@ -20,7 +20,7 @@ void compare(struct date_st* date, struct date_st* date_1, int i)
 {//分別從年開始比到日期
 	if (i < 0)
 	{
-		printf("Same");
+		printf("Samn\n");
 	}
 	else if (date->date[i] > date_1->date[i])//struct指標 = date.date[i];
 	{
