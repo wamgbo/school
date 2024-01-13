@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+int main(){
+    char words;
+    int ok;
+    char *ptr=(char*)(ok*sizeof(char));
+    scanf("%d",&ok);
+    fgets(ptr,ok,stdin);
+    char *ptr=(char*)(ok*sizeof());
+    scanf("%d",&ok);
+    fgets(ptr,ok,stdin);
+
+;
+}
