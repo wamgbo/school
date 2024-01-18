@@ -3,41 +3,27 @@
 
 int main()
 {
-    int count = 0, pos = 0, word_check = 0;
+    int count = 0;
     char lines[1000];
-    while (1)
+    bool flag = 1;
+    while (fgets(lines, sizeof(lines), stdin) != NULL)
     {
         count=0;
-        fgets(lines, sizeof(lines), stdin);
-        lines[strlen(lines) - 1] = '\0';
-        if (lines[0] == '\0')
-        {
-            break;
-        }
-        
         for (int i = 0; i <= strlen(lines); i++)
-        {
-            if (lines[i] == ' ' || lines[i] == '\0')
+        {//idea by xufeng.
+            if (!((lines[i] >= 'A' && lines[i] <= 'Z') || (lines[i] >= 'a' && lines[i] <= 'z')))
             {
-                word_check = 0;
-                for (int j = i - pos; j < i; j++)
-                {
-                    if (lines[j] >= 'a' && lines[j] <= 'z' || lines[j] >= 'A' && lines[j] <= 'Z')
-                    {
-                        word_check++;
-                    }
-                }
-                if (word_check > 1)
+                if (flag==1)
                 {
                     count++;
+                    flag=0;
                 }
-                pos = 0;
             }
-            else
+            else 
             {
-                pos++;
+                flag=1;
             }
         }
-        printf("%d\n", count);
+        printf("%d\n",count);
     }
 }
