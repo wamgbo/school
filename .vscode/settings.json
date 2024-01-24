@@ -1,5 +1,8 @@
 {
     "files.associations": {
-        "動態記憶體配置": "cpp"
+        "動態記憶體配置": "cpp",
+        "array": "c",
+        "string": "c",
+        "string_view": "c"
     }
 }
