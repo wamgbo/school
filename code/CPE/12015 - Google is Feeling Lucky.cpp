@@ -12,17 +12,17 @@ void compare(data mydata[], data temp[], int &pos);
 
 int main()
 {
-    int pos, time;
+    int Appear_time, time;
     data temp[10] = {0};//temp
     scanf("%d", &time);//次數
     for (int i = 0; i < time; i++)
     {
-        pos = 0;
+        Appear_time = 0;
         data mydata[10] = {0};
         input(mydata);
-        compare(mydata, temp, pos);
+        compare(mydata, temp, Appear_time);
         printf("Case #%d:\n", i + 1);
-        for (int j = 0; j < pos; j++)
+        for (int j = 0; j < Appear_time; j++)
         {
             printf("%s\n", temp[j].url);//
         }
@@ -37,7 +37,7 @@ void input(data mydata[])//輸入
     }
 }
 
-void compare(data mydata[], data temp[], int &pos) // 找最大
+void compare(data mydata[], data temp[], int &Appear_time) // 找最大
 {
     int max = mydata[0].num;
     for (int i = 0; i < 10; i++)//找裡面的最大值
@@ -48,9 +48,9 @@ void compare(data mydata[], data temp[], int &pos) // 找最大
     {
         if (mydata[i].num == max)
         {
-            temp[pos].num = mydata[i].num;
-            strcpy(temp[pos].url, mydata[i].url);
-            pos++;//紀錄有位個值
+            temp[Appear_time].num = mydata[i].num;
+            strcpy(temp[Appear_time].url, mydata[i].url);
+            Appear_time++;//紀錄有次數
         }
     }
 }
