@@ -1,70 +1,27 @@
 #include <stdio.h>
 #include <string.h>
-
-typedef struct
-{
-    int num, word;
-} data;
-
-void sort(data num[])
-{
-    int k = 0;
-    data temp;
-    for (int i = 0; i < 128; i++)
-    {
-        for (int j = 0; j < 128 - i - 1; j++)
-        {
-            if (num[j].num > num[j + 1].num)
-            {
-                temp.word = num[j].word;
-                temp.num = num[j].num;
-                num[j].word = num[j + 1].word;
-                num[j].num = num[j + 1].num;
-                num[j + 1].word = temp.word;
-                num[j + 1].num = temp.num;
-            }
-        }
-    }
-
-    // Fix the loop condition and use k instead of j
-    while (num[k].num != 0)
-    {
-        if (num[k].num != 0)
-        {
-            printf("%d %d\n", num[k].num, num[k].word);
-        }
-
-        k++;
-    }
-}
+#include <stdlib.h>
 
 int main()
 {
-    char word[1000];
+    char words[1001];
     int num[128];
-    data list[128];
-    int k = 0;
-
-    while (fgets(word, sizeof(word), stdin))
+    while (fgets(words, sizeof(words), stdin))//針對題目的東重測字可以這樣寫
     {
-        memset(num, 0, sizeof(num)); // Initialize num array
-        for (int i = 0; i < strlen(word); i++)
+        memset(num, 0, sizeof(num));//reset
+        for (int i = 0; i < strlen(words); i++)
         {
-            num[word[i]]++; // Increment the count at the corresponding index
+            num[words[i]]++;//把num的位置
         }
-
-        for (int j = 126; j >= 32; j--)
+        for (int i = 1; i < strlen(words); i++)
         {
-            if (num[j] != 0)
+            for (int j = 126; j >= 32; j--)//這樣做的同時可以從最大的ascill字元開始印
             {
-                list[k].word = j;
-                list[k].num = num[j];
-                k++; // Increment k after updating list array
+                if (num[j] == i)//如果等於i可以確認是否為0同時可以從最小的開始印
+                {
+                    printf("%d %d\n", j, num[j]);
+                }
             }
         }
-        sort(list);
     }
-    // Call the sort function to display the sorted result
-
-    return 0;
 }
