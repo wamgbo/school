@@ -12,7 +12,7 @@ int main()
     }
     else
     {
-        cout<<"错了"<<endl;
+        cout<<"了"<<endl;
     }
     
 }
