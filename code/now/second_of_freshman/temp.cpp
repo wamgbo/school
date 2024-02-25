@@ -8,11 +8,11 @@ int main()
     cin>>word1;
     if(word==word1)
     {
-        cout<<"对"<<endl;
+        cout<<"对了"<<endl;
     }
     else
     {
-        cout<<"错了"<<endl;
+        cout<<"daw了"<<endl;
     }
     
 }
