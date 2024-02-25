@@ -6,13 +6,13 @@ int main()
 {
     string word="香蕉",word1;
     cin>>word1;
-    if  (strcmp(word,word1)==0)
+    if(word==word1)
     {
-        cout<<"y";
+        cout<<"对了"<<endl;
     }
     else
     {
-        cout<<"n";
+        cout<<"错了"<<endl;
     }
     
 }
