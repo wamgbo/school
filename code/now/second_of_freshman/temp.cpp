@@ -1,18 +1,18 @@
-#include <iostream>
-#include <cstring>
+#include<iostream>
+#include<iomanip>
 using namespace std;
 
-int main()
+inline double F(int num)
 {
-    string word="香蕉",word1;
-    cin>>word1;
-    if(word==word1)
-    {
-        cout<<"对了"<<endl;
-    }
-    else
-    {
-        cout<<"dw了"<<endl;
-    }
-    
+    return 1.8*num+32;
+}
+inline double C(int num)
+{
+    return (num-32)/1.8;
+}
+int main() 
+{
+    double num;
+    cin>>num;
+    cout<<setprecision(2)<<fixed<<F(num)<<"\n";
 }
