@@ -1,18 +1,12 @@
-#include<iostream>
-#include<iomanip>
+#include <iostream>
+#include <cstdlib>
+#include <string>
 using namespace std;
-
-inline double F(int num)
+int main(void)
 {
-    return 1.8*num+32;
-}
-inline double C(int num)
-{
-    return (num-32)/1.8;
-}
-int main() 
-{
-    double num;
-    cin>>num;
-    cout<<fixed<<setprecision(2)<<F(num)<<"\n";
+    string str="1234567";
+    char temp;
+    int i;
+    cout<<str.length()<<endl<<str.size();
+    return 0;
 }
