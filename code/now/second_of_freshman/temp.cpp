@@ -14,5 +14,5 @@ int main()
 {
     double num;
     cin>>num;
-    cout<<setprecision(2)<<fixed<<F(num)<<"\n";
+    cout<<fixed<<setprecision(2)<<F(num)<<"\n";
 }
