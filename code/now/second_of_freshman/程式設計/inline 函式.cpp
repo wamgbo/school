@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-inline bool primeQ(int n)//判斷質數
+inline bool primeQ(int n) // 判斷質數
 {
     int sum = 0;
     if (n <= 1)
@@ -37,6 +37,6 @@ int main(void)
                 sum++;
             }
         }
-        cout << sum<<'\n';
+        cout << sum << '\n';
     }
 }
