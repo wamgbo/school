@@ -4,27 +4,32 @@
 using namespace std;
 class Ball
 {
+private:
+    double *r=new double;
 public:
-    double r = 1;
     Ball(double input)
     {
-        set(input);
+        *r = input;
+    }
+    ~Ball()
+    {
+        delete r;
     }
     double area()
     {
-        return 4 * 3.14 * (r * r);
+        return 4 * 3.14 * (*r * *r);
     }
     double volume()
     {
-        return 1.33333333333 * 3.14 * r * r * r;
+        return 1.33333333333 * 3.14 * *r * *r * *r;
     }
     void print()
     {
-        cout << fixed << setprecision(0) << r;
+        cout << fixed << setprecision(0) << *r;
     }
     void set(double k)
     {
-        r = k;
+        *r = k;
     }
 };
 int main(void)
@@ -37,5 +42,6 @@ int main(void)
     cout << "ball_1之體積為: " << setprecision(1) << fixed << ball_1.volume() << endl; // 體積取到小數第一位
     ball_2.set(100);
     ball_2.print();
-    return 0;
+    ~ball_1();
+    ~ball_2();
 }

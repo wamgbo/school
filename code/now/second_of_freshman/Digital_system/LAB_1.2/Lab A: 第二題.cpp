@@ -14,7 +14,7 @@ inline void binarytodex(int num, int time, int &dex)
 }
 int main(void)
 {
-    int time, num[4], num1[4], dex[4], dex1[4], sum1 = 0, sum2 = 0;
+    int time, num[4]={0}, num1[4]={0}, dex[4]={0}, dex1[4]={0}, sum1 = 0, sum2 = 0;
     cout << "位元運算";
     cin >> time;
     cout << "第一位BCD:";
@@ -25,7 +25,7 @@ int main(void)
     cout << "第二位BCD:";
     for (int i = 0; i < time; i++)
     {
-        cin >> num[i];
+        cin >> num1[i];
     }
     for (int i = 0; i < time; i++)
     {
@@ -37,5 +37,5 @@ int main(void)
         sum1 += dex[i - 1] * pow(10, i - 1);
         sum2 += dex1[i - 1] * pow(10, i - 1);
     }
-    cout << sum1 + sum2 << endl;
+    cout << sum1+sum2 << endl;
 }

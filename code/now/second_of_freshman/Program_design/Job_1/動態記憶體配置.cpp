@@ -17,6 +17,7 @@ inline void word_to_num(char word[], int size)
 int main(void)
 {
     int num, size;
+    char word[100];
     cout << "請輸入字串大小:";
     cin >> num;
     getchar();//擷取\n
@@ -25,4 +26,5 @@ int main(void)
     cin.getline(p, num);
     size = strlen(p);//取得動態記憶體輸入內容的字串長度
     word_to_num(p, size);
+    delete[] p;
 }
