@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include <iostream>
 #include <iomanip>
 
@@ -25,32 +26,64 @@ void check(int num[], int n, bool result[], int index)
         }
     }
 }
+=======
+#include<iostream>
+>>>>>>> 911d571 (up)
 
+using namespace std;
+
+void check(int matrix[],int n,bool sum[],int index)
+{
+    int time=0;
+    for(int i=0;i<n*n/2;i++)
+    {
+        if(matrix[i]==matrix[n*n-1-i])
+            time++;
+    }
+    if(time==n*n/2)
+        sum[index]=1;
+    else
+        sum[index]=0;
+}
 int main(void)
 {
-    int time, index = 0, n;
-    bool sum[100];
-    cin >> time;
-    for (int i = 0; i < time; i++)
+    int time,n,matrix[1024],index;
+    bool ppap[99];
+    cin>>time;
+    for(int i=0;i<time;i++)
     {
+<<<<<<< HEAD
         int matrix[1024] = {0};
         index = 0;
         cin >> n;
         for (int i = 0; i < n; i++)
+=======
+        index=0;
+        cin>>n;
+        for(int j=0;j<n;j++)
+>>>>>>> 911d571 (up)
         {
-            for (int j = 0; j < n; j++)
-            {
-                cin >> matrix[index + j];
-            }
-            index += n;
+            cin>>matrix[j];
+            // for(int k=0;k<n;k++)
+            // {
+            //     cin>>matrix[index+k];
+            // }
+            // index+=n;
         }
-        check(matrix, n, sum, i);
+        check(matrix,n,ppap,i);
     }
-    for (int i = 0; i < time; i++)
+    for (int j=0;j<time;j++)
     {
+<<<<<<< HEAD
         if (sum[i] == 1)
             cout << "Test #" << i + 1 << ": Symmetric." << endl;
+=======
+        if(ppap[j])
+        {
+            cout<<"Test #"<<j+1<<": Symmetric."<<endl;
+        }
+>>>>>>> 911d571 (up)
         else
-            cout << "Test #" << i + 1 << ": Non-symmetric." << endl;
+            cout<<"Test #"<<j+1<<": Noe-symmetric."<<endl;
     }
 }
