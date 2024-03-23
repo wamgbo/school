@@ -1,12 +1,17 @@
-#include <iostream>
-#include <cstdlib>
-#include <string>
+#include<iostream>
 using namespace std;
+
 int main(void)
 {
-    string str="1234567";
-    char temp;
-    int i;
-    cout<<str.length()<<endl<<str.size();
-    return 0;
+    int num;
+    cin>>num;
+    char *ptr=new char[num] {0};
+    ptr[5]='a';
+    for (int i = 0; i < num; i++)
+    {
+        cout<<ptr[i];   
+    }
+    
+    
+    delete ptr;
 }
