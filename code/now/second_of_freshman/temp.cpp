@@ -10,7 +10,7 @@ int main()
     {
         string a = "John";
         string b = "William";
-        string c = "Cathy";
+        string c = "Cath";
         cout << "\n(1)" << endl;
         // (1)
         Account John(a), William(b); // 定義兩個帳戶
