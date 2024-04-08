@@ -25,7 +25,6 @@ private:
 public:
     Cyn(double input_r, double input_h):Circle(input_r)
     {
-        r = input_r;
         h = input_h;
     }
     double area()
