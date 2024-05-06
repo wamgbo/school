@@ -19,8 +19,7 @@ int main(void)
     int num, size;
     char word[100];
     cout << "請輸入字串大小:";
-    cin >> num;
-    getchar();//擷取\n
+    cin >> num.get();//截取\n
     char *p = new char[num];
     cout << "請輸入字串內容:";
     cin.getline(p, num);
