@@ -27,13 +27,12 @@ public:
         brand = b.brand;
         fuel = b.fuel;
         speed = b.speed;
-        
     }
     void calKM()
     {
-        cout << "可行駛里程數:" << ' ' << fuel * 15 << "KM"<<endl;
+        cout << "可行駛里程數:" << ' ' << fuel * 15 << "KM" << endl;
     }
-    void show()
+    virtual void show()
     {
         cout << brand << ' ' << fuel << ' ' << speed;
         calKM();
@@ -51,7 +50,7 @@ public:
     }
     void calKM()
     {
-        cout << "可行駛里程數:" << ' ' << fuel * 20 << "KM"<<endl;
+        cout << "可行駛里程數:" << ' ' << fuel * 20 << "KM" << endl;
     }
     void show()
     {
@@ -72,9 +71,9 @@ public:
     void calKM()
     {
         if (speed > 60)
-            cout << "可行駛里程數:" << ' ' << fuel * 10 << "KM"<<endl;
+            cout << "可行駛里程數:" << ' ' << fuel * 10 << "KM" << endl;
         else
-            cout << "可行駛里程數:" << ' ' << fuel * 12 << "KM"<<endl;
+            cout << "可行駛里程數:" << ' ' << fuel * 12 << "KM" << endl;
     }
     void show()
     {
@@ -82,15 +81,20 @@ public:
         calKM();
     }
 };
-
+void output(motor &b_motor)
+{
+    b_motor.show();
+}
 int motor::num = 0;
 int main()
 {
-    electricMotor A("Gogoro", 10, 25, 2);         // 座位數2
-    raceMotor B("華洋賽車", 15, 150, "TT150");    // 型號TT 150
-    A.show();                                     // 印出電動機車品牌：Gogoro座位數：2 油量10 速度：25可行駛公里數：200
-    B.show();                                     // 印出競技機車品牌：華洋賽車型號：TT 150   油量：15速度：150可行駛公里數：150
-    cout << "已建立機車數" << motor::num << endl; // 印出2
-    system("pause");
+    motor A("光陽", 8, 50);                    // 機車品牌：光陽 油量:8 速度：50 可行駛公里數：120
+    electricMotor B("Gogoro", 10, 25, 2);      // 座位數 2
+    raceMotor C("華洋賽車", 15, 150, "TT150"); // 型號 TT 150
+    output(A);                                 // 輸出 機車品牌：光陽 油量:8 速度：50 可行駛公里數：120
+    output(B);                                 // 輸出 電動機車品牌：Gogoro 座位數：2 油量:10 速度：25 可行駛公里數：200
+    output(C);                                 // 輸出 競技機車品牌：華洋賽車 型號： TT150 座位數:2 油量：15 速度：150
+    // 可行駛公里數：150
+    cout << "建立機車數: " << motor::num << endl; // output 建立機車數: 3
     return 0;
 }
