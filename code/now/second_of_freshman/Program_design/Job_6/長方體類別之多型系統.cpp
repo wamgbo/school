@@ -43,12 +43,15 @@ public:
     virtual double Volume() { return 0.1 * m_Length * m_Breadth * m_Height; }
     EBox(double lv, double bv, double hv) : CGlassBox(lv, bv, hv) {}
 };
-class FBox :public EBox
+class FBox : public EBox
 {
     FBox(double lv, double bv, double hv) : EBox(lv, bv, hv) {}
-    virtual double Volume() { return 0.85 * m_Length * m_Breadth * m_Height; }
-
+    virtual double Volume() { return 0.05 * m_Length * m_Breadth * m_Height; }
 };
+void output(CBox &b_motor)
+{
+    cout<<b_motor.Volume()<<endl;
+}
 int main()
 {
     CBox myBox(2.0, 3.0, 4.0);           // Declare a base box
@@ -63,7 +66,7 @@ int main()
     output(myGlassBox);
     output(a_dbox);
     output(a_ebox);
-    cout << "* ****接下來之方式非處理物件實體, 無法達成多型 * ****\n ";
+    cout << "* ****接下來之方式非處理物件實體, 無法達成多型 * ****\n";
     CBox array[10]; // 非物件實體, 無法達成多型
     array[0] = myBox;
     array[1] = myGlassBox;
