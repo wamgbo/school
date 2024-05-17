@@ -1,37 +1,12 @@
 #include<iostream>
-#include<iomanip>
+#include<cstdlib>
 using namespace std;
-
-class A
+template <class T> 
+T add(T a,T b)
 {
-public:
-    void fun()
-    {
-        cout<<"dwa";
-    }
-};
-class B :virtual public A
-{
-
-};
-class B_
-{
-private:
-    A test;
-public:
-    B_():test(){}
-    
-};
-class C: virtual public A
-{
-
-};
-class d:public B_,public C
-{
-
-};
+    return a+b;
+}
 int main(void)
 {
-    d dd;
-    dd.fun();
+    cout<<add<int>(3,4)<<endl<<add<double>(3.4,5.313);
 }
