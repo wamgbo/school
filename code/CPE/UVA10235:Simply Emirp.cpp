@@ -1,53 +1,43 @@
 #include <iostream>
-#include <iomanip>
 #include <math.h>
 using namespace std;
-int fun(int num)
+
+void re(int num, int &renum)
 {
-    bool flag = 0;
-    if (num >= 2 && num <= 3)
-        return 1;
-    for (int i = 2; i <= num - 1; i++)
+    int length = to_string(num).length();//to_string(num)變成sting
+    while (length--)
     {
-        if (num % i == 0)
-            flag = 1;
+        renum += (num % 10) * pow(10, length);
+        num /= 10;
     }
-    if (flag)
+}
+int prime(int num)
+{
+    bool flag = true;
+    if (num <= 1)
         return 0;
-    else
+    else if (num >= 2 && num <= 3)
         return 1;
+    else
+    {
+        for (int i = 2; i < num; i++)
+            if (num % i == 0)
+                flag = false;
+        return flag;
+    }
 }
 int main(void)
 {
-    int num, du_num, temp, sum = 0, count = 0;
-
+    int num, renum = 0;
     while (cin >> num)
     {
-        cout << num;
-        temp = num;
-        sum = 0;
-        while (temp != 0)
-        {
-            du_num = temp % 10;
-            sum = sum * 10 + du_num;
-            temp /= 10;
-        }
-
-        if (fun(num))
-        {
-            if (sum == num)
-            {
-                cout << " is prime.";
-            }
-            else if (fun(sum))
-                cout << " is emirp.";
-            else
-                cout << " is prime.";
-        }
+        renum = 0;
+        re(num, renum);
+        if (prime(num) && prime(renum) && num != renum)
+            cout << num << " is emirp." << endl;
+        else if (prime(num))
+            cout << num << " is prime." << endl;
         else
-        {
-            cout << " is not prime.";
-        }
-        cout << endl;
+            cout << num << " is not prime." << endl;
     }
 }
