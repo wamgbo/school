@@ -1,47 +1,36 @@
 #include <iostream>
 #include <math.h>
+#include <algorithm>
 using namespace std;
-void sort(int result[], int size)
+
+int middle(int num[], int LEN)
 {
-    int temp;
-    for (int i = 0; i < size; i++)
-    {
-        for (int j = 0; j < size - 1; j++)
-        {
-            if (result[j] > result[j + 1])
-            {
-                temp = result[j];
-                result[j] = result[j + 1];
-                result[j + 1] = temp;
-            }
-        }
-    }
-}
-int middle(int result[], int size)
-{
-    if (size % 2 == 0)
-        return (result[size / 2] + result[size / 2 - 1]) / 2;
+    if (LEN % 2 == 0)
+        return (num[LEN / 2] + num[LEN / 2 - 1]) / 2;
     else
-        return result[size / 2];
+        return num[LEN / 2];
 }
 int main(void)
 {
-    int num, time, result[1024] = {0};
-    cin >> num;
-    for (int z = 0; z < num; z++)
+    int num, input_time, input[10000], sum;
+    cin>>num>>sum;
+    cout<<temp(num,sum);
+
+    while (num--)
     {
-        int input[1024] = {0}, sum = 0;
-        cin >> time;
-        for (int i = 0; i < time; i++)
+        sum=0;
+        cin >> input_time;
+        for (int i = 0; i < input_time; i++)
         {
             cin >> input[i];
         }
-        sort(input, time);
-        int mid = middle(input, time);
-        for (int j = 0; j < time; j++)
+        sort(input, input + input_time);
+        int line = middle(input, input_time);
+        for (int i = 0; i < input_time; i++)
         {
-            sum += abs(mid - input[j]);
+            sum += abs(input[i] - line);
         }
         cout << sum << endl;
     }
 }
+

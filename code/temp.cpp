@@ -1,12 +1,58 @@
 #include<iostream>
+#include<iomanip>
 #include<cstdlib>
 using namespace std;
-template <class T> 
-T add(T a,T b)
+
+ void fun(long long num)
 {
-    return a+b;
+    if(num>=10000000)
+    {
+        
+        fun(num/10000000);
+        cout<<" kuti";
+        num%=10000000;
+    }
+    if(num>=100000)
+    {
+        
+        fun(num/100000);
+        cout<<" lakh";
+        num%=100000;
+    }
+    if(num>=1000)
+    {
+        
+        fun(num/1000);
+        cout<<" hajar";
+        num%=1000;
+    }
+    if(num>=100)
+    {
+        
+        fun(num/100);
+        cout<<" shata";
+        num%=100;
+    }
+    if(num)
+    {
+        cout<<" "<<num;
+    }
 }
 int main(void)
 {
-    cout<<add<int>(3,4)<<endl<<add<double>(3.4,5.313);
+    long long num,sum[10000]={0};
+    int i=0;
+    while (cin>>num)
+    {
+        cout<<setw(4)<<i+1<<".";
+        if(num)
+            fun(num);
+        else 
+            cout<<" 0";
+        sum[i]=num;   
+        i++;
+        cout<<endl;
+    }
+    
+    
 }

@@ -42,11 +42,11 @@ int main(void)
     int i=1;
     while (cin >> num)
     {
-        cout<<i<<'.';
+        cout<<setw(4)<<i<<'.';//記得
         if (num)//除非是0不然都會ture
             fun(num);
         else
-            cout <<" 0"<<endl;
+            cout <<" 0";
         i++;
         cout<<endl;
     }

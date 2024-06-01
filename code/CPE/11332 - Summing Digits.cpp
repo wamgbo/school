@@ -25,4 +25,4 @@ int main(void)
             sum = fun(sum);
         cout << sum << endl;
     }
-}
+}   
