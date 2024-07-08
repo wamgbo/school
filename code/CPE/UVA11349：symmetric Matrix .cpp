@@ -18,7 +18,7 @@ inline bool fun(long long matrix[], int num)//做回文判斷
     }
     return 1;
 }
-
+//w
 int main(void)
 {
     int num, N;
