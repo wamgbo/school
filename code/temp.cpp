@@ -29,7 +29,7 @@ public:
         reduction();
         return *this;
     }
-    bool operator==(RationalNumber &b) // 多載 == 運算子
+    bool operator==(RationalNumber &b) // 多載 == 運算子2
     {
         if (denominator == b.denominator && numerator == b.numerator)
             return 1;
