@@ -1,13 +1,14 @@
 #include <iostream>
 #include <math.h>
+#include <vector>
 using namespace std;
-int jolly_jumper(int num[], int size)
+int jolly_jumper(vector<int> &num, int size)
 {
-    int sum = 0,i=0;
-    while (i<size-1)
+    int sum = 0, i = 0;
+    while (i < size - 1)
     {
-        sum+=abs(num[i]-num[i+1]);
-        sum-=i+1;
+        sum += abs(num[i] - num[i + 1]);
+        sum -= i + 1;
         i++;
     }
     if (sum)
@@ -20,7 +21,7 @@ int main(void)
     int frequency, i = 0;
     while (cin >> frequency)
     {
-        int *arr = new int[frequency];
+        vector<int> arr(frequency);
         for (int i = 0; i < frequency; i++)
         {
             cin >> arr[i];
@@ -29,6 +30,5 @@ int main(void)
             cout << "Jolly" << endl;
         else
             cout << "Not jolly" << endl;
-        delete[] arr;
     }
 }
