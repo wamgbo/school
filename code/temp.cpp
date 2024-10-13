@@ -1,9 +1,14 @@
-#include<iostream>
-#include<vector>
-#include<list>
-int main(void)
+#include <stdio.h>
+#include <string.h>
+int main()
 {
-    std::verctor<int>ldist={2,1,3,5};
-    std::verctor<int>ldist={2,1,3,5};
-    std::cout<<ldist.size();
+  char number[1001];
+ 
+    int num1=100,num2=200;
+    num1=num1^num2;
+    num2=num1^num2;
+    num1=num1^num2;
+    printf("%d,%d",num1,num2);
+  
+  
 }
